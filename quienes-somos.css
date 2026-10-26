@@ -1,0 +1,1210 @@
+/* =========================================================================
+   REDISEÑO «QUIÉNES SOMOS» — CASA HOMO LUDENS (VERSIÓN INTERACTIVA MEJORADA)
+   Estilos 100% encapsulados bajo #hl-about-root para evitar conflictos
+   con WordPress.
+   ========================================================================= */
+
+@font-face {
+    font-family: 'Lithos Pro Black';
+    src: local('Lithos Pro Black'), local('LithosPro-Black'),
+         url('https://casahomoludens.com/wp-content/uploads/fonts/LithosPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cheesegum';
+    src: local('Cheesegum'), local('Cheesegum-Regular'),
+         url('https://casahomoludens.com/wp-content/uploads/fonts/Cheesegum.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+#hl-about-root {
+    --hl-ab-verde-oscuro: #1B371C;
+    --hl-ab-verde: #637C2E;
+    --hl-ab-naranja: #EF9322;
+    --hl-ab-naranja-oscuro: #E66622;
+    --hl-ab-violeta: #68598A;
+    --hl-ab-violeta-oscuro: #47336E;
+    --hl-ab-arena-piedra: #D8B888;
+    --hl-ab-arena-clara: #E5DEC9;
+    --hl-ab-madera-clara: #F4F1DE;
+    --hl-ab-negro: #000000;
+    --hl-ab-blanco: #FFFFFF;
+
+    --hl-ab-font-titulos: 'Lithos Pro Black', 'Luckiest Guy', 'Barlow', sans-serif;
+    --hl-ab-font-subtitulos: 'Cheesegum', 'Fredoka', 'Barlow', sans-serif;
+    --hl-ab-font-textos: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    position: relative;
+    width: 100%;
+    background-color: var(--hl-ab-madera-clara);
+    background-image: radial-gradient(rgba(27, 55, 28, 0.08) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    color: var(--hl-ab-negro);
+    font-family: var(--hl-ab-font-textos);
+    line-height: 1.6;
+    padding: 36px 16px 80px 16px;
+    overflow: hidden;
+    box-sizing: border-box;
+    isolation: isolate;
+}
+
+#hl-about-root *,
+#hl-about-root *::before,
+#hl-about-root *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================================================
+   FONDO PARALLAX ORIGINAL (.hl-bg-stage) + FICHAS FLOTANTES
+   ========================================================================= */
+#hl-about-root .hl-bg-stage {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#hl-about-root .hl-parallax-item {
+    position: absolute;
+    will-change: transform;
+    transition: transform 0.12s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#hl-about-root .hl-parallax-item svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hl-about-root .hl-canopy-tl { top: 45px; left: -40px; width: 200px; height: 200px; }
+#hl-about-root .hl-canopy-tr { top: 45px; right: -40px; width: 200px; height: 200px; }
+#hl-about-root .hl-canopy-bl { bottom: -40px; left: -40px; width: 210px; height: 200px; }
+#hl-about-root .hl-canopy-br { bottom: -40px; right: -40px; width: 210px; height: 200px; }
+
+#hl-about-root .hl-bg-token {
+    opacity: 0.22;
+    filter: drop-shadow(3px 4px 0px rgba(0, 0, 0, 0.35));
+}
+#hl-about-root .hl-token-1 { top: 32%; left: 3%; width: 64px; height: 64px; }
+#hl-about-root .hl-token-2 { top: 58%; right: 4%; width: 72px; height: 72px; }
+#hl-about-root .hl-token-3 { top: 78%; left: 6%; width: 56px; height: 56px; }
+
+@media (max-width: 1024px) {
+    #hl-about-root .hl-canopy-tl,
+    #hl-about-root .hl-canopy-tr,
+    #hl-about-root .hl-canopy-bl,
+    #hl-about-root .hl-canopy-br {
+        width: 120px;
+        height: 120px;
+    }
+    #hl-about-root .hl-bg-token {
+        width: 42px;
+        height: 42px;
+        opacity: 0.14;
+    }
+}
+
+/* Contenedor Principal */
+#hl-about-root .hl-ab-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+
+/* =========================================================================
+   EFECTOS VISUALES EN TEXTOS Y TÍTULOS CINÉTICOS
+   ========================================================================= */
+#hl-about-root .hl-ab-kinetic-title {
+    display: inline-block;
+    cursor: default;
+}
+
+#hl-about-root .hl-ab-kinetic-title .hl-ab-word {
+    display: inline-block;
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease, text-shadow 0.2s ease;
+    margin-right: 0.26em;
+}
+
+#hl-about-root .hl-ab-kinetic-title .hl-ab-word:last-child {
+    margin-right: 0;
+}
+
+#hl-about-root .hl-ab-kinetic-title:hover .hl-ab-word:hover {
+    transform: translateY(-5px) rotate(-2deg) scale(1.06);
+    color: var(--hl-ab-naranja);
+    text-shadow: 3px 5px 0px var(--hl-ab-negro);
+}
+
+/* Resaltador Dinámico de Texto al hacer Scroll (Subir y Bajar) */
+#hl-about-root .hl-ab-text-highlight {
+    position: relative;
+    display: inline;
+    background-image: linear-gradient(120deg, rgba(239, 147, 34, 0.42) 0%, rgba(239, 147, 34, 0.42) 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 88%;
+    background-position: 0 92%;
+    padding: 0 4px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-size 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+}
+
+#hl-about-root .hl-ab-text-highlight.hl-ab-hl-green {
+    background-image: linear-gradient(120deg, rgba(99, 124, 46, 0.32) 0%, rgba(99, 124, 46, 0.32) 100%);
+}
+
+#hl-about-root .is-inview .hl-ab-text-highlight,
+#hl-about-root .hl-ab-scroll-anim.is-inview .hl-ab-text-highlight {
+    background-size: 100% 88%;
+}
+
+/* =========================================================================
+   SISTEMA DE ANIMACIONES BIDIRECCIONALES AL HACER SCROLL (SUBIR Y BAJAR)
+   ========================================================================= */
+#hl-about-root .hl-ab-scroll-anim {
+    opacity: 0;
+    will-change: transform, opacity, filter;
+    transition:
+        opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 0.5s ease-out;
+    transition-delay: var(--hl-delay, 0s);
+    filter: blur(3px);
+}
+
+#hl-about-root .hl-ab-scroll-anim[data-anim="fade-up"] {
+    transform: translateY(42px) scale(0.97);
+}
+
+#hl-about-root .hl-ab-scroll-anim[data-anim="zoom-up"] {
+    transform: translateY(34px) scale(0.92);
+}
+
+#hl-about-root .hl-ab-scroll-anim[data-anim="slide-left"] {
+    transform: translateX(-52px) rotate(-1.2deg);
+}
+
+#hl-about-root .hl-ab-scroll-anim[data-anim="slide-right"] {
+    transform: translateX(52px) rotate(1.2deg);
+}
+
+#hl-about-root .hl-ab-scroll-anim.is-inview {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    filter: blur(0px);
+}
+
+/* =========================================================================
+   A. HERO DE PRESENTACIÓN «QUIÉNES SOMOS»
+   ========================================================================= */
+#hl-about-root .hl-ab-hero {
+    position: relative;
+    background-color: var(--hl-ab-verde-oscuro);
+    border: 5px solid var(--hl-ab-negro);
+    border-radius: 56px 30px 54px 28px / 30px 54px 32px 50px;
+    box-shadow: 0px 10px 0px var(--hl-ab-negro);
+    padding: 38px 36px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 960px) {
+    #hl-about-root .hl-ab-hero {
+        grid-template-columns: 1.15fr 0.85fr;
+        padding: 44px 46px;
+    }
+}
+
+#hl-about-root .hl-ab-hero-blob {
+    position: absolute;
+    right: -60px;
+    bottom: -70px;
+    width: 480px;
+    height: 370px;
+    background-color: var(--hl-ab-violeta-oscuro);
+    border: 5px solid var(--hl-ab-negro);
+    border-radius: 58% 42% 60% 40% / 48% 55% 45% 52%;
+    z-index: 1;
+    pointer-events: none;
+    animation: hlAbMorphBlob 9s ease-in-out infinite alternate;
+}
+
+@keyframes hlAbMorphBlob {
+    0% { border-radius: 58% 42% 60% 40% / 48% 55% 45% 52%; transform: rotate(0deg) scale(1); }
+    100% { border-radius: 45% 55% 48% 52% / 58% 42% 58% 42%; transform: rotate(4deg) scale(1.04); }
+}
+
+#hl-about-root .hl-ab-hero-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#hl-about-root .hl-ab-badge-top {
+    background-color: var(--hl-ab-naranja);
+    color: var(--hl-ab-negro);
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 6px 16px;
+    border: 3px solid var(--hl-ab-negro);
+    border-radius: 22px 10px 22px 10px;
+    box-shadow: 3px 4px 0px var(--hl-ab-negro);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-title-xl {
+    margin: 0;
+    font-family: var(--hl-ab-font-titulos);
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    line-height: 1.05;
+    color: var(--hl-ab-blanco);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-shadow: 2px 3px 0px var(--hl-ab-negro);
+    background-color: var(--hl-ab-naranja-oscuro);
+    padding: 14px 26px;
+    border: 4px solid var(--hl-ab-negro);
+    border-radius: 32px 16px 34px 16px;
+    box-shadow: 5px 6px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-hero-lead {
+    background-color: var(--hl-ab-blanco);
+    color: var(--hl-ab-negro);
+    border: 3.5px solid var(--hl-ab-negro);
+    border-left: 10px solid var(--hl-ab-naranja);
+    border-radius: 24px 14px 24px 14px;
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+    padding: 16px 20px;
+    font-size: 1.02rem;
+    font-weight: 500;
+}
+
+#hl-about-root .hl-ab-hero-lead p {
+    margin: 0 0 10px 0;
+}
+#hl-about-root .hl-ab-hero-lead p:last-child {
+    margin-bottom: 0;
+}
+
+#hl-about-root .hl-ab-hero-sublead {
+    color: var(--hl-ab-verde-oscuro);
+    font-weight: 600;
+}
+
+/* Widget Interactivo de Dado */
+#hl-about-root .hl-ab-dice-widget {
+    width: 100%;
+    background-color: var(--hl-ab-madera-clara);
+    border: 3.5px solid var(--hl-ab-negro);
+    border-radius: 22px 12px 22px 12px;
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#hl-about-root .hl-ab-dice-btn {
+    background-color: var(--hl-ab-violeta-oscuro);
+    color: var(--hl-ab-blanco);
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.92rem;
+    font-weight: 700;
+    padding: 8px 14px;
+    border: 2.5px solid var(--hl-ab-negro);
+    border-radius: 14px 8px 14px 8px;
+    box-shadow: 2px 3px 0px var(--hl-ab-negro);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+#hl-about-root .hl-ab-dice-btn:hover {
+    background-color: var(--hl-ab-naranja);
+    color: var(--hl-ab-negro);
+    transform: translateY(-2px);
+}
+
+#hl-about-root .hl-ab-dice-cube {
+    display: inline-block;
+    font-size: 1.25rem;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#hl-about-root .hl-ab-dice-cube.is-rolling {
+    transform: rotate(360deg) scale(1.3);
+}
+
+#hl-about-root .hl-ab-dice-result {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--hl-ab-negro);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#hl-about-root .hl-ab-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+/* Botones de Marca */
+#hl-about-root .hl-ab-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--hl-ab-font-titulos);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 12px 22px;
+    border: 3px solid var(--hl-ab-negro);
+    border-radius: 20px 10px 20px 10px;
+    box-shadow: -2px 4px 0px var(--hl-ab-negro);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+}
+
+#hl-about-root .hl-ab-btn-primary {
+    background-color: var(--hl-ab-naranja-oscuro);
+    color: var(--hl-ab-blanco);
+    text-shadow: 1px 2px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-btn-primary:hover,
+#hl-about-root .hl-ab-btn-primary:focus-visible {
+    background-color: var(--hl-ab-naranja);
+    color: var(--hl-ab-negro);
+    text-shadow: none;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 6px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-btn-secondary {
+    background-color: var(--hl-ab-arena-clara);
+    color: var(--hl-ab-negro);
+    font-family: var(--hl-ab-font-subtitulos);
+    font-weight: 700;
+}
+
+#hl-about-root .hl-ab-btn-secondary:hover,
+#hl-about-root .hl-ab-btn-secondary:focus-visible {
+    background-color: var(--hl-ab-naranja);
+    color: var(--hl-ab-negro);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 6px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-btn-violet {
+    background-color: var(--hl-ab-violeta-oscuro);
+    color: var(--hl-ab-blanco);
+    text-shadow: 1px 2px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-btn-violet:hover,
+#hl-about-root .hl-ab-btn-violet:focus-visible {
+    background-color: var(--hl-ab-violeta);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 6px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-btn-green {
+    background-color: var(--hl-ab-verde);
+    color: var(--hl-ab-blanco);
+    text-shadow: 1px 2px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-btn-green:hover,
+#hl-about-root .hl-ab-btn-green:focus-visible {
+    background-color: var(--hl-ab-verde-oscuro);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 6px 0px var(--hl-ab-negro);
+}
+
+/* Arte Hero e Ilustración Animada */
+#hl-about-root .hl-ab-hero-art {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+
+#hl-about-root .hl-ab-art-card {
+    width: 100%;
+    max-width: 440px;
+    background-color: var(--hl-ab-arena-piedra);
+    border: 4.5px solid var(--hl-ab-negro);
+    border-radius: 42px 75px 38px 70px / 68px 40px 72px 42px;
+    box-shadow: 6px 8px 0px var(--hl-ab-negro);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#hl-about-root .hl-ab-art-card svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes hlAbFloatSlow {
+    0%, 100% { transform: translate(85px, 85px) translateY(0px) rotate(0deg); }
+    50% { transform: translate(85px, 85px) translateY(-8px) rotate(-2deg); }
+}
+
+@keyframes hlAbFloatAlt {
+    0%, 100% { transform: translate(215px, 70px) translateY(0px) rotate(0deg); }
+    50% { transform: translate(215px, 70px) translateY(7px) rotate(2deg); }
+}
+
+@keyframes hlAbKeySwing {
+    0%, 100% { transform: translate(330px, 125px) rotate(22deg); }
+    50% { transform: translate(330px, 120px) rotate(30deg); }
+}
+
+#hl-about-root .hl-ab-svg-float-1 { animation: hlAbFloatSlow 3.8s ease-in-out infinite; }
+#hl-about-root .hl-ab-svg-float-2 { animation: hlAbFloatAlt 4.4s ease-in-out infinite; }
+#hl-about-root .hl-ab-svg-key { animation: hlAbKeySwing 3.5s ease-in-out infinite; }
+
+/* =========================================================================
+   B. HISTORIA Y FILOSOFÍA (3 HITOS REALES)
+   ========================================================================= */
+#hl-about-root .hl-ab-philosophy {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+#hl-about-root .hl-ab-section-head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+#hl-about-root .hl-ab-kicker {
+    font-family: var(--hl-ab-font-subtitulos);
+    color: var(--hl-ab-naranja-oscuro);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-title-lg {
+    margin: 0;
+    font-family: var(--hl-ab-font-titulos);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--hl-ab-blanco);
+    background-color: var(--hl-ab-verde-oscuro);
+    padding: 10px 26px;
+    border: 4px solid var(--hl-ab-negro);
+    border-radius: 30px 14px 32px 14px;
+    box-shadow: 4px 6px 0px var(--hl-ab-negro);
+    text-shadow: 2px 3px 0px var(--hl-ab-negro);
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+@media (max-width: 900px) {
+    #hl-about-root .hl-ab-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#hl-about-root .hl-ab-pillar-card {
+    background-color: var(--hl-ab-blanco);
+    border: 4px solid var(--hl-ab-negro);
+    border-radius: 34px 18px 36px 18px / 18px 34px 18px 36px;
+    box-shadow: 5px 7px 0px var(--hl-ab-negro);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+#hl-about-root .hl-ab-pillar-top {
+    padding: 14px 18px;
+    border-bottom: 3.5px solid var(--hl-ab-negro);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--hl-ab-blanco);
+}
+
+#hl-about-root .hl-ab-bg-verde { background-color: var(--hl-ab-verde-oscuro); }
+#hl-about-root .hl-ab-bg-naranja { background-color: var(--hl-ab-naranja-oscuro); }
+#hl-about-root .hl-ab-bg-violeta { background-color: var(--hl-ab-violeta-oscuro); }
+
+#hl-about-root .hl-ab-pillar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--hl-ab-blanco);
+    border: 3px solid var(--hl-ab-negro);
+    border-radius: 12px 6px 12px 6px;
+    box-shadow: 2px 3px 0px var(--hl-ab-negro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#hl-about-root .hl-ab-pillar-card:hover .hl-ab-pillar-icon {
+    transform: rotate(-12deg) scale(1.15);
+}
+
+#hl-about-root .hl-ab-pillar-tag {
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-pillar-body {
+    padding: 18px 20px;
+}
+
+#hl-about-root .hl-ab-pillar-title {
+    margin: 0 0 8px 0;
+    font-family: var(--hl-ab-font-titulos);
+    font-size: 1.25rem;
+    color: var(--hl-ab-verde-oscuro);
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-pillar-body p {
+    margin: 0;
+    font-size: 0.96rem;
+    font-weight: 500;
+    color: var(--hl-ab-negro);
+}
+
+/* =========================================================================
+   C & D. PERFILES DE SANDRA Y NATÀLIA
+   ========================================================================= */
+#hl-about-root .hl-ab-profile-card {
+    position: relative;
+    background-color: var(--hl-ab-blanco);
+    border: 5px solid var(--hl-ab-negro);
+    border-radius: 56px 32px 58px 30px / 30px 56px 32px 52px;
+    box-shadow: 0px 12px 0px var(--hl-ab-negro);
+    padding: 36px 32px;
+    overflow: hidden;
+}
+
+#hl-about-root .hl-ab-theme-sandra {
+    border-top: 12px solid var(--hl-ab-verde-oscuro);
+}
+
+#hl-about-root .hl-ab-theme-natalia {
+    border-top: 12px solid var(--hl-ab-violeta-oscuro);
+}
+
+#hl-about-root .hl-ab-profile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    align-items: start;
+}
+
+@media (min-width: 960px) {
+    #hl-about-root .hl-ab-profile-grid {
+        grid-template-columns: 380px 1fr;
+    }
+
+    #hl-about-root .hl-ab-profile-grid.hl-ab-grid-reverse {
+        grid-template-columns: 1fr 380px;
+    }
+}
+
+@media (max-width: 959px) {
+    #hl-about-root .hl-ab-profile-grid.hl-ab-grid-reverse .hl-ab-profile-media {
+        order: -1;
+    }
+}
+
+/* Columna Multimedia y Retrato */
+#hl-about-root .hl-ab-profile-media {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#hl-about-root .hl-ab-photo-wrapper {
+    position: relative;
+}
+
+#hl-about-root .hl-ab-photo-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.05;
+    background-color: var(--hl-ab-arena-piedra);
+    border: 4.5px solid var(--hl-ab-negro);
+    border-radius: 44px 72px 40px 68px / 64px 42px 70px 44px;
+    box-shadow: 6px 8px 0px var(--hl-ab-negro);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#hl-about-root .hl-ab-photo-frame.hl-ab-frame-alt {
+    border-radius: 68px 42px 64px 40px / 42px 68px 44px 66px;
+    background-color: var(--hl-ab-arena-clara);
+}
+
+#hl-about-root .hl-ab-founder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+#hl-about-root .hl-ab-photo-frame:hover .hl-ab-founder-img {
+    transform: scale(1.05);
+}
+
+/* Placeholder cuando falta la imagen física */
+#hl-about-root .hl-ab-photo-placeholder {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--hl-ab-madera-clara) 0%, var(--hl-ab-arena-piedra) 100%);
+}
+
+#hl-about-root .hl-ab-photo-frame[data-img-missing="true"] .hl-ab-founder-img {
+    display: none;
+}
+
+#hl-about-root .hl-ab-photo-frame[data-img-missing="true"] .hl-ab-photo-placeholder {
+    display: flex;
+}
+
+#hl-about-root .hl-ab-placeholder-title {
+    font-family: var(--hl-ab-font-titulos);
+    font-size: 1.15rem;
+    color: var(--hl-ab-verde-oscuro);
+}
+
+#hl-about-root .hl-ab-placeholder-violet .hl-ab-placeholder-title {
+    color: var(--hl-ab-violeta-oscuro);
+}
+
+#hl-about-root .hl-ab-placeholder-note {
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: var(--hl-ab-blanco);
+    border: 2.5px solid var(--hl-ab-negro);
+    border-radius: 14px;
+    padding: 6px 12px;
+    box-shadow: 2px 3px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-floating-badge {
+    margin-top: -16px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 4;
+    width: fit-content;
+    max-width: 92%;
+    text-align: center;
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 7px 16px;
+    border: 3px solid var(--hl-ab-negro);
+    border-radius: 20px 10px 20px 10px;
+    box-shadow: 3px 4px 0px var(--hl-ab-negro);
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-badge-sandra {
+    background-color: var(--hl-ab-naranja);
+    color: var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-badge-natalia {
+    background-color: var(--hl-ab-violeta-oscuro);
+    color: var(--hl-ab-blanco);
+}
+
+/* Caja de Contacto y Redes */
+#hl-about-root .hl-ab-contact-box {
+    background-color: var(--hl-ab-madera-clara);
+    border: 3.5px solid var(--hl-ab-negro);
+    border-radius: 28px 14px 28px 14px;
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#hl-about-root .hl-ab-contact-box-title {
+    margin: 0;
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.95rem;
+    color: var(--hl-ab-verde-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 2.5px solid var(--hl-ab-negro);
+    padding-bottom: 6px;
+}
+
+#hl-about-root .hl-ab-social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#hl-about-root .hl-ab-social-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--hl-ab-blanco);
+    color: var(--hl-ab-negro);
+    border: 3px solid var(--hl-ab-negro);
+    border-radius: 18px 10px 18px 10px;
+    box-shadow: 3px 3px 0px var(--hl-ab-negro);
+    padding: 9px 14px;
+    text-decoration: none;
+    transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#hl-about-root .hl-ab-social-pill small {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4b5563;
+    line-height: 1.1;
+}
+
+#hl-about-root .hl-ab-social-pill strong {
+    font-family: var(--hl-ab-font-textos);
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-social-pill:hover,
+#hl-about-root .hl-ab-social-pill:focus-visible {
+    transform: translateX(6px) translateY(-2px);
+    background-color: var(--hl-ab-naranja);
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+}
+
+/* Columna de Contenido Editorial */
+#hl-about-root .hl-ab-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#hl-about-root .hl-ab-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    border-bottom: 4px solid var(--hl-ab-negro);
+    padding-bottom: 14px;
+}
+
+#hl-about-root .hl-ab-profile-role {
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--hl-ab-naranja-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+#hl-about-root .hl-ab-profile-name {
+    margin: 0;
+    font-family: var(--hl-ab-font-titulos);
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    line-height: 1.08;
+    color: var(--hl-ab-blanco);
+    background-color: var(--hl-ab-verde-oscuro);
+    padding: 10px 22px;
+    border: 3.5px solid var(--hl-ab-negro);
+    border-radius: 26px 12px 28px 12px;
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+    text-shadow: 2px 3px 0px var(--hl-ab-negro);
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-theme-natalia .hl-ab-profile-name {
+    background-color: var(--hl-ab-violeta-oscuro);
+}
+
+/* Bloques de Historia Personal */
+#hl-about-root .hl-ab-story-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#hl-about-root .hl-ab-story-item {
+    background-color: var(--hl-ab-madera-clara);
+    border: 3.5px solid var(--hl-ab-negro);
+    border-radius: 24px 14px 24px 14px;
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+    padding: 16px 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#hl-about-root .hl-ab-story-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 8px 0px var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-story-highlight {
+    background-color: var(--hl-ab-arena-clara);
+    border-left: 10px solid var(--hl-ab-naranja-oscuro);
+}
+
+#hl-about-root .hl-ab-story-highlight-violet {
+    background-color: var(--hl-ab-arena-clara);
+    border-left: 10px solid var(--hl-ab-violeta-oscuro);
+}
+
+#hl-about-root .hl-ab-story-label {
+    display: block;
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--hl-ab-verde-oscuro);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-theme-natalia .hl-ab-story-label {
+    color: var(--hl-ab-violeta-oscuro);
+}
+
+#hl-about-root .hl-ab-story-item p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--hl-ab-negro);
+}
+
+/* Componente Interactivo: Juegos Preferidos de Natàlia */
+#hl-about-root .hl-ab-favgames-box {
+    background-color: var(--hl-ab-blanco);
+    border: 3.5px solid var(--hl-ab-negro);
+    border-radius: 26px 14px 26px 14px;
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#hl-about-root .hl-ab-favgames-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+#hl-about-root .hl-ab-favgames-hint {
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.8rem;
+    background-color: var(--hl-ab-arena-clara);
+    padding: 3px 10px;
+    border-radius: 99px;
+    border: 2px solid var(--hl-ab-negro);
+}
+
+#hl-about-root .hl-ab-favgames-quote {
+    margin: 0;
+    font-size: 0.98rem;
+    font-weight: 500;
+}
+
+#hl-about-root .hl-ab-favgames-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#hl-about-root .hl-ab-game-tab {
+    flex: 1 1 130px;
+    background-color: var(--hl-ab-madera-clara);
+    color: var(--hl-ab-negro);
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 9px 14px;
+    border: 3px solid var(--hl-ab-negro);
+    border-radius: 16px 8px 16px 8px;
+    box-shadow: 2px 3px 0px var(--hl-ab-negro);
+    cursor: pointer;
+    transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#hl-about-root .hl-ab-game-tab:hover {
+    background-color: var(--hl-ab-naranja);
+    transform: translateY(-3px) scale(1.03);
+}
+
+#hl-about-root .hl-ab-game-tab.is-active {
+    background-color: var(--hl-ab-violeta-oscuro);
+    color: var(--hl-ab-blanco);
+    box-shadow: 3px 4px 0px var(--hl-ab-naranja);
+    transform: translateY(-2px);
+}
+
+#hl-about-root .hl-ab-game-detail-panel {
+    background-color: var(--hl-ab-madera-clara);
+    border: 2.5px solid var(--hl-ab-negro);
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Panel de Formación Profesional e Insignias Interactivas */
+#hl-about-root .hl-ab-credentials-panel {
+    background-color: var(--hl-ab-verde-oscuro);
+    color: var(--hl-ab-blanco);
+    border: 4px solid var(--hl-ab-negro);
+    border-radius: 28px 16px 28px 16px;
+    box-shadow: 5px 6px 0px var(--hl-ab-negro);
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#hl-about-root .hl-ab-credentials-panel.hl-ab-cred-violet {
+    background-color: var(--hl-ab-violeta-oscuro);
+}
+
+#hl-about-root .hl-ab-credentials-title {
+    margin: 0;
+    font-family: var(--hl-ab-font-titulos);
+    font-size: 1.15rem;
+    color: var(--hl-ab-naranja);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 1.5px 2px 0px var(--hl-ab-negro);
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-credentials-text {
+    margin: 0;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--hl-ab-blanco);
+}
+
+#hl-about-root .hl-ab-badges-list {
+    list-style: none;
+    margin: 4px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#hl-about-root .hl-ab-cred-chip {
+    background-color: var(--hl-ab-blanco);
+    color: var(--hl-ab-negro);
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 6px 13px;
+    border: 2.5px solid var(--hl-ab-negro);
+    border-radius: 12px 6px 12px 6px;
+    box-shadow: 2px 3px 0px var(--hl-ab-negro);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#hl-about-root .hl-ab-cred-chip:hover,
+#hl-about-root .hl-ab-cred-chip.is-popped {
+    background-color: var(--hl-ab-naranja);
+    color: var(--hl-ab-negro);
+    transform: translateY(-4px) rotate(-1.5deg) scale(1.05);
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+}
+
+/* Cita de Visión del Juego */
+#hl-about-root .hl-ab-vision-quote {
+    margin: 0;
+    background-color: var(--hl-ab-naranja);
+    color: var(--hl-ab-negro);
+    border: 3.5px solid var(--hl-ab-negro);
+    border-radius: 24px 12px 24px 12px;
+    box-shadow: 4px 5px 0px var(--hl-ab-negro);
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+#hl-about-root .hl-ab-vision-quote:hover {
+    transform: scale(1.01) rotate(-0.4deg);
+}
+
+#hl-about-root .hl-ab-vision-quote p {
+    margin: 0;
+}
+
+/* =========================================================================
+   E. CIERRE DE LA SECCIÓN
+   ========================================================================= */
+#hl-about-root .hl-ab-closing-card {
+    background-color: var(--hl-ab-arena-piedra);
+    border: 5px solid var(--hl-ab-negro);
+    border-radius: 52px 28px 54px 26px / 28px 50px 26px 52px;
+    box-shadow: 0px 10px 0px var(--hl-ab-negro);
+    padding: 36px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    transition: transform 0.25s ease;
+}
+
+#hl-about-root .hl-ab-closing-badge {
+    background-color: var(--hl-ab-negro);
+    color: var(--hl-ab-blanco);
+    font-family: var(--hl-ab-font-subtitulos);
+    font-size: 0.9rem;
+    padding: 5px 16px;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-closing-title {
+    margin: 0;
+    font-family: var(--hl-ab-font-titulos);
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    color: var(--hl-ab-verde-oscuro);
+    text-transform: uppercase;
+}
+
+#hl-about-root .hl-ab-closing-desc {
+    margin: 0;
+    max-width: 680px;
+    font-size: 1.02rem;
+    font-weight: 600;
+}
+
+#hl-about-root .hl-ab-closing-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+#hl-about-root .hl-ab-closing-footer {
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 3px dashed var(--hl-ab-negro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+#hl-about-root .hl-ab-closing-footer a {
+    color: var(--hl-ab-verde-oscuro);
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+#hl-about-root a:focus-visible,
+#hl-about-root button:focus-visible,
+#hl-about-root .hl-ab-cred-chip:focus-visible {
+    outline: 3.5px solid var(--hl-ab-naranja-oscuro);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #hl-about-root .hl-ab-scroll-anim {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition: none !important;
+    }
+    #hl-about-root .hl-ab-text-highlight {
+        background-size: 100% 88% !important;
+        transition: none !important;
+    }
+    #hl-about-root .hl-ab-svg-float-1,
+    #hl-about-root .hl-ab-svg-float-2,
+    #hl-about-root .hl-ab-svg-key,
+    #hl-about-root .hl-ab-hero-blob {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #hl-about-root {
+        padding: 20px 10px 48px 10px;
+    }
+    #hl-about-root .hl-ab-hero,
+    #hl-about-root .hl-ab-profile-card,
+    #hl-about-root .hl-ab-closing-card {
+        padding: 24px 18px;
+        border-radius: 34px 20px 34px 20px;
+    }
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos | Casa Homo Ludens</title>
+
+    <!-- Importación de Barlow + Fallbacks Visuales de Marca -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Fredoka:wght@600;700&family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <!-- Estilos Encapsulados -->
+    <link rel="stylesheet" href="quienes-somos.css">
+
+    <!-- Lógica Interactiva Encapsulada -->
+    <script src="quienes-somos.js" defer></script>
+</head>
+<body style="margin: 0; padding: 0; background-color: #F4F1DE;">
+
+    <!-- =====================================================================
+         INICIO DEL BLOQUE AISLADO PARA WORDPRESS (#hl-about-root)
+         ===================================================================== -->
+    <div id="hl-about-root" class="hl-about-scope">
+
+        <!-- FONDO PARALLAX ORIGINAL + FICHAS FLOTANTES INTERACTIVAS -->
+        <div id="hl-interactive-bg" class="hl-bg-stage" aria-hidden="true">
+            <!-- Esquina Superior Izquierda Original -->
+            <div class="hl-parallax-item hl-canopy-tl" data-speed="0.04" data-scroll-speed="0.12">
+                <svg viewBox="0 0 220 220" fill="none">
+                    <path d="M-20,-20 L180,-10 C205,45 175,115 115,155 C60,190 10,180 -20,140 Z" fill="#1B371C" stroke="#000000" stroke-width="5"/>
+                    <path d="M-10,-10 C50,40 95,85 130,135" stroke="#637C2E" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <!-- Esquina Superior Derecha Original -->
+            <div class="hl-parallax-item hl-canopy-tr" data-speed="-0.05" data-scroll-speed="0.15">
+                <svg viewBox="0 0 230 220" fill="none">
+                    <path d="M240,-20 C140,-15 55,35 30,115 C10,175 65,205 135,190 C195,175 235,110 240,-20 Z" fill="#637C2E" stroke="#000000" stroke-width="5"/>
+                </svg>
+            </div>
+            <!-- Esquina Inferior Izquierda Original -->
+            <div class="hl-parallax-item hl-canopy-bl" data-speed="0.06" data-scroll-speed="-0.12">
+                <svg viewBox="0 0 240 220" fill="none">
+                    <path d="M-25,230 C-10,130 55,55 150,40 C205,35 225,85 195,145 C165,205 80,235 -25,230 Z" fill="#637C2E" stroke="#000000" stroke-width="5"/>
+                </svg>
+            </div>
+            <!-- Esquina Inferior Derecha Original -->
+            <div class="hl-parallax-item hl-canopy-br" data-speed="-0.04" data-scroll-speed="-0.14">
+                <svg viewBox="0 0 240 220" fill="none">
+                    <path d="M250,230 C235,125 165,45 75,35 C20,30 -5,80 25,140 C55,200 145,235 250,230 Z" fill="#1B371C" stroke="#000000" stroke-width="5"/>
+                </svg>
+            </div>
+
+            <!-- Elementos Lúdicos Flotantes Adicionales en el Background -->
+            <div class="hl-parallax-item hl-bg-token hl-token-1" data-speed="0.08" data-scroll-speed="0.22">
+                <svg viewBox="0 0 80 80" fill="none">
+                    <rect x="8" y="8" width="64" height="64" rx="14" fill="#EF9322" stroke="#000" stroke-width="4"/>
+                    <circle cx="26" cy="26" r="6" fill="#000"/>
+                    <circle cx="40" cy="40" r="6" fill="#FFF"/>
+                    <circle cx="54" cy="54" r="6" fill="#000"/>
+                </svg>
+            </div>
+            <div class="hl-parallax-item hl-bg-token hl-token-2" data-speed="-0.07" data-scroll-speed="-0.18">
+                <svg viewBox="0 0 90 90" fill="none">
+                    <polygon points="45,5 85,27 85,63 45,85 5,63 5,27" fill="#47336E" stroke="#000" stroke-width="4"/>
+                    <circle cx="45" cy="45" r="14" fill="#EF9322" stroke="#000" stroke-width="3.5"/>
+                </svg>
+            </div>
+            <div class="hl-parallax-item hl-bg-token hl-token-3" data-speed="0.05" data-scroll-speed="0.25">
+                <svg viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="32" fill="#D8B888" stroke="#000" stroke-width="4"/>
+                    <circle cx="40" cy="40" r="18" fill="#1B371C" stroke="#000" stroke-width="3.5"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="hl-ab-container">
+
+            <!-- =============================================================
+                 A. PRESENTACIÓN DE LA SECCIÓN (HERO EDITORIAL INTERACTIVO)
+                 ============================================================= -->
+            <header class="hl-ab-hero hl-ab-scroll-anim" data-anim="zoom-up">
+                <div class="hl-ab-hero-blob" aria-hidden="true"></div>
+
+                <div class="hl-ab-hero-content">
+                    <span class="hl-ab-badge-top hl-ab-pulse-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2C9.5 2 7.5 4 7.5 6.5C7.5 8.2 8.4 9.7 9.8 10.4L7 19H17L14.2 10.4C15.6 9.7 16.5 8.2 16.5 6.5C16.5 4 14.5 2 12 2Z" fill="#47336E" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+                            <path d="M5 22H19" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                        IDENTIDAD LÚDICA • BAHÍA BLANCA
+                    </span>
+
+                    <h1 class="hl-ab-title-xl hl-ab-kinetic-title" data-text="QUIÉNES SOMOS">
+                        QUIÉNES SOMOS
+                    </h1>
+
+                    <div class="hl-ab-hero-lead">
+                        <p>Detrás de <strong>Casa Homo Ludens</strong> están las historias de <span class="hl-ab-text-highlight">Sandra y Natàlia</span>: un espacio donde la pasión de toda la vida por los juegos de mesa y la adrenalina de las salas de escape se unen con la <span class="hl-ab-text-highlight hl-ab-hl-green">formación en recreación, gamificación y educación</span>.</p>
+                        <p class="hl-ab-hero-sublead">Entendemos al juego como una <span class="hl-ab-text-highlight">herramienta fundamental para el aprendizaje</span> y el encuentro en todas las edades y contextos.</p>
+                    </div>
+
+                    <!-- Micro-interacción Lúdica: Lanzador de Dado de Curiosidades Reales -->
+                    <div class="hl-ab-dice-widget">
+                        <button type="button" id="hl-ab-roll-btn" class="hl-ab-dice-btn" aria-label="Tirar el dado para descubrir un dato real de las fundadoras">
+                            <span id="hl-ab-dice-icon" class="hl-ab-dice-cube" aria-hidden="true">🎲</span>
+                            <span>TIRAR EL DADO DE NUESTRA HISTORIA</span>
+                        </button>
+                        <div id="hl-ab-dice-output" class="hl-ab-dice-result" aria-live="polite">
+                            <strong>Tirada inicial:</strong> Tocá el dado para descubrir momentos reales de la historia de Sandra y Natàlia.
+                        </div>
+                    </div>
+
+                    <div class="hl-ab-hero-nav">
+                        <a href="#perfil-sandra" class="hl-ab-btn hl-ab-btn-primary">
+                            Conocer a Sandra ⬇
+                        </a>
+                        <a href="#perfil-natalia" class="hl-ab-btn hl-ab-btn-secondary">
+                            Conocer a Natàlia ⬇
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ilustración Editorial Lúdica Interactiva -->
+                <div class="hl-ab-hero-art">
+                    <div class="hl-ab-art-card hl-ab-tilt-card">
+                        <svg viewBox="0 0 460 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración lúdica con elementos de juegos de mesa y salas de escape">
+                            <rect width="460" height="380" fill="#D8B888"/>
+                            <circle cx="380" cy="70" r="95" fill="#E5DEC9" stroke="#000" stroke-width="4"/>
+                            <path d="M-20 310 Q 140 250 280 310 T 480 290 L 480 400 L -20 400 Z" fill="#637C2E" stroke="#000" stroke-width="4.5"/>
+
+                            <!-- Camino de casillas -->
+                            <g stroke="#000" stroke-width="4" stroke-linejoin="round">
+                                <rect class="hl-ab-svg-tile" x="45" y="235" width="75" height="45" rx="10" transform="rotate(-8 45 235)" fill="#F4F1DE"/>
+                                <rect class="hl-ab-svg-tile" x="135" y="220" width="75" height="45" rx="10" transform="rotate(-2 135 220)" fill="#EF9322"/>
+                                <rect class="hl-ab-svg-tile" x="225" y="225" width="75" height="45" rx="10" transform="rotate(5 225 225)" fill="#F4F1DE"/>
+                                <rect class="hl-ab-svg-tile" x="315" y="245" width="75" height="45" rx="10" transform="rotate(12 315 245)" fill="#68598A"/>
+                            </g>
+
+                            <!-- Meeple Naranja -->
+                            <g class="hl-ab-svg-float-1" transform="translate(85, 85)">
+                                <path d="M55 15 C70 15 80 27 80 42 C80 52 73 60 65 64 L95 92 C100 97 96 106 88 106 L72 106 L78 148 C79 154 74 160 68 160 L58 160 L55 130 L52 160 L42 160 C36 160 31 154 32 148 L38 106 L22 106 C14 106 10 97 15 92 L45 64 C37 60 30 52 30 42 C30 27 40 15 55 15 Z" fill="#E66622" stroke="#000" stroke-width="4.5" stroke-linejoin="round"/>
+                                <circle cx="47" cy="38" r="4" fill="#000"/>
+                                <circle cx="63" cy="38" r="4" fill="#000"/>
+                                <path d="M46 48 Q55 55 64 48" stroke="#000" stroke-width="3.5" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Meeple Violeta -->
+                            <g class="hl-ab-svg-float-2" transform="translate(215, 70)">
+                                <path d="M55 15 C70 15 80 27 80 42 C80 52 73 60 65 64 L95 92 C100 97 96 106 88 106 L72 106 L78 148 C79 154 74 160 68 160 L58 160 L55 130 L52 160 L42 160 C36 160 31 154 32 148 L38 106 L22 106 C14 106 10 97 15 92 L45 64 C37 60 30 52 30 42 C30 27 40 15 55 15 Z" fill="#47336E" stroke="#000" stroke-width="4.5" stroke-linejoin="round"/>
+                                <circle cx="47" cy="38" r="4" fill="#FFF"/>
+                                <circle cx="63" cy="38" r="4" fill="#FFF"/>
+                                <path d="M46 48 Q55 55 64 48" stroke="#FFF" stroke-width="3.5" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Dado -->
+                            <g class="hl-ab-svg-spin" transform="translate(42, 48) rotate(-14)">
+                                <rect x="0" y="0" width="64" height="64" rx="14" fill="#FFFFFF" stroke="#000" stroke-width="4.5"/>
+                                <circle cx="18" cy="18" r="5.5" fill="#000"/>
+                                <circle cx="32" cy="32" r="5.5" fill="#E66622"/>
+                                <circle cx="46" cy="46" r="5.5" fill="#000"/>
+                            </g>
+
+                            <!-- Llave de Escape -->
+                            <g class="hl-ab-svg-key" transform="translate(330, 125) rotate(22)">
+                                <circle cx="30" cy="30" r="22" fill="#EF9322" stroke="#000" stroke-width="4.5"/>
+                                <circle cx="30" cy="30" r="8" fill="#1B371C" stroke="#000" stroke-width="3.5"/>
+                                <path d="M52 30 H105 V46 H92 V30 M78 30 V42" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+
+                            <rect x="70" y="318" width="320" height="42" rx="14" fill="#1B371C" stroke="#000" stroke-width="4"/>
+                            <text x="230" y="345" text-anchor="middle" fill="#EF9322" font-family="'Cheesegum', 'Fredoka', sans-serif" font-size="18" font-weight="bold" letter-spacing="1">JUEGOS DE MESA • ESCAPES • COMUNIDAD</text>
+                        </svg>
+                    </div>
+                </div>
+            </header>
+
+            <!-- =============================================================
+                 B. HISTORIA Y FILOSOFÍA DE HOMO LUDENS
+                 ============================================================= -->
+            <section class="hl-ab-philosophy" aria-labelledby="hl-ab-phil-heading">
+                <div class="hl-ab-section-head hl-ab-scroll-anim" data-anim="fade-up">
+                    <span class="hl-ab-kicker">NUESTRO CAMINO Y VISIÓN</span>
+                    <h2 id="hl-ab-phil-heading" class="hl-ab-title-lg hl-ab-kinetic-title">
+                        CUANDO EL HOBBY SE TRANSFORMA EN PROYECTO
+                    </h2>
+                </div>
+
+                <div class="hl-ab-pillars-grid">
+                    <!-- Hito 1 -->
+                    <article class="hl-ab-pillar-card hl-ab-tilt-card hl-ab-scroll-anim" data-anim="slide-left" style="--hl-delay: 0.05s;">
+                        <div class="hl-ab-pillar-top hl-ab-bg-verde">
+                            <span class="hl-ab-pillar-icon" aria-hidden="true">🎲</span>
+                            <span class="hl-ab-pillar-tag">RAÍCES LÚDICAS</span>
+                        </div>
+                        <div class="hl-ab-pillar-body">
+                            <h3 class="hl-ab-pillar-title">El juego en familia</h3>
+                            <p>Los juegos de mesa nos acompañan desde la infancia. Aquellas <span class="hl-ab-text-highlight">horas compartidas en familia</span> y los juegos conservados desde la niñez son la semilla de lo que hoy es un emprendimiento pensado para reunir a las personas.</p>
+                        </div>
+                    </article>
+
+                    <!-- Hito 2 -->
+                    <article class="hl-ab-pillar-card hl-ab-tilt-card hl-ab-scroll-anim" data-anim="fade-up" style="--hl-delay: 0.15s;">
+                        <div class="hl-ab-pillar-top hl-ab-bg-naranja">
+                            <span class="hl-ab-pillar-icon" aria-hidden="true">🗝️</span>
+                            <span class="hl-ab-pillar-tag">BARCELONA • BAHÍA BLANCA</span>
+                        </div>
+                        <div class="hl-ab-pillar-body">
+                            <h3 class="hl-ab-pillar-title">El origen de los Escapes</h3>
+                            <p>Con raíces entre Barcelona y Bahía Blanca (desde 2010), en el año <span class="hl-ab-text-highlight">2015 en Barcelona</span> vivimos por primera vez un escape en vivo: el descubrimiento exacto para que los adultos también pudieran jugar y vivir una experiencia gratificante.</p>
+                        </div>
+                    </article>
+
+                    <!-- Hito 3 -->
+                    <article class="hl-ab-pillar-card hl-ab-tilt-card hl-ab-scroll-anim" data-anim="slide-right" style="--hl-delay: 0.25s;">
+                        <div class="hl-ab-pillar-top hl-ab-bg-violeta">
+                            <span class="hl-ab-pillar-icon" aria-hidden="true">🎓</span>
+                            <span class="hl-ab-pillar-tag">PROPÓSITO EDUCATIVO</span>
+                        </div>
+                        <div class="hl-ab-pillar-body">
+                            <h3 class="hl-ab-pillar-title">Herramienta de aprendizaje</h3>
+                            <p>Combinamos la recreación, la gamificación y la educación socioconstructivista. Consideramos al juego como una <span class="hl-ab-text-highlight hl-ab-hl-green">herramienta fundamental para todo aprendizaje</span>, aplicable en todas las edades, públicos y contextos.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- =============================================================
+                 C. PERFIL DE SANDRA ELIZABETH VISSANI
+                 ============================================================= -->
+            <article id="perfil-sandra" class="hl-ab-profile-card hl-ab-theme-sandra hl-ab-scroll-anim" data-anim="slide-left" aria-labelledby="title-sandra">
+                <div class="hl-ab-profile-grid">
+
+                    <!-- Columna Retrato y Contacto Rápido -->
+                    <div class="hl-ab-profile-media hl-ab-scroll-anim" data-anim="zoom-up" style="--hl-delay: 0.1s;">
+                        <div class="hl-ab-photo-wrapper">
+                            <div class="hl-ab-photo-frame hl-ab-tilt-card" data-has-photo="false">
+                                <!-- Reemplazar src con la ruta de WordPress de Sandra -->
+                                <img
+                                    src="sandra-vissani.jpg"
+                                    alt="Retrato de Sandra Elizabeth Vissani"
+                                    class="hl-ab-founder-img"
+                                    onerror="this.parentElement.setAttribute('data-img-missing', 'true');"
+                                >
+                                <div class="hl-ab-photo-placeholder" aria-hidden="true">
+                                    <svg viewBox="0 0 120 120" width="84" height="84" fill="none">
+                                        <circle cx="60" cy="60" r="54" fill="#1B371C" stroke="#000" stroke-width="5"/>
+                                        <circle cx="60" cy="46" r="18" fill="#EF9322" stroke="#000" stroke-width="4"/>
+                                        <path d="M28 98 C32 76 88 76 92 98" fill="#EF9322" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                                    </svg>
+                                    <span class="hl-ab-placeholder-title">SANDRA ELIZABETH VISSANI</span>
+                                    <span class="hl-ab-placeholder-note">Espacio preparado para fotografía real (<code>sandra-vissani.jpg</code>)</span>
+                                </div>
+                            </div>
+
+                            <div class="hl-ab-floating-badge hl-ab-badge-sandra">
+                                <span>🎯 RECREACIÓN, GAMIFICACIÓN Y LUDOTECAS</span>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de Contacto y Redes de Sandra -->
+                        <div class="hl-ab-contact-box">
+                            <h3 class="hl-ab-contact-box-title">CONTACTO Y REDES DE SANDRA</h3>
+                            <div class="hl-ab-social-list">
+                                <a href="https://wa.me/5492915045772" target="_blank" rel="noopener noreferrer" class="hl-ab-social-pill hl-ab-pill-wa" aria-label="Enviar WhatsApp a Sandra al 0291 5045772">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    <div>
+                                        <small>Celular / WhatsApp</small>
+                                        <strong>0291 5045772</strong>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.instagram.com/sanvissani/" target="_blank" rel="noopener noreferrer" class="hl-ab-social-pill hl-ab-pill-ig" aria-label="Instagram de Sandra: Sanvissani">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                    <div>
+                                        <small>Instagram</small>
+                                        <strong>Sanvissani</strong>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.facebook.com/search/top?q=Sandra%20Vissani" target="_blank" rel="noopener noreferrer" class="hl-ab-social-pill hl-ab-pill-fb" aria-label="Facebook de Sandra: Sandra Vissani">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                    <div>
+                                        <small>Facebook</small>
+                                        <strong>Sandra Vissani</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Editorial e Historia de Sandra -->
+                    <div class="hl-ab-profile-info">
+                        <div class="hl-ab-profile-header hl-ab-scroll-anim" data-anim="fade-up">
+                            <span class="hl-ab-profile-role">CO-FUNDADORA • CASA HOMO LUDENS</span>
+                            <h2 id="title-sandra" class="hl-ab-profile-name hl-ab-kinetic-title">
+                                SANDRA ELIZABETH VISSANI
+                            </h2>
+                        </div>
+
+                        <!-- Bloques Narrativos Reales -->
+                        <div class="hl-ab-story-blocks">
+                            <div class="hl-ab-story-item hl-ab-scroll-anim" data-anim="fade-up" style="--hl-delay: 0.08s;">
+                                <span class="hl-ab-story-label">🎲 De colección de infancia a emprendimiento</span>
+                                <p>«Me encantan los juegos de mesa, desde niña mi familia siempre me regalaba y aun los conservo. <span class="hl-ab-text-highlight hl-ab-hl-green">Este hermoso hobby hoy se ha convertido en un genial emprendimiento.</span>»</p>
+                            </div>
+
+                            <div class="hl-ab-story-item hl-ab-story-highlight hl-ab-scroll-anim" data-anim="fade-up" style="--hl-delay: 0.16s;">
+                                <span class="hl-ab-story-label">🔓 2015 en Barcelona: El primer Escape en Vivo</span>
+                                <p>«En el año 2015 en Barcelona jugué por primera vez a un escape en vivo, y <span class="hl-ab-text-highlight">supe que era lo que estaba buscando para que pudieran jugar los adultos</span>, y vivir una experiencia muy gratificante.»</p>
+                            </div>
+                        </div>
+
+                        <!-- Formación Profesional Interactiva -->
+                        <div class="hl-ab-credentials-panel hl-ab-scroll-anim" data-anim="zoom-up" style="--hl-delay: 0.2s;">
+                            <h3 class="hl-ab-credentials-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#EF9322" stroke="#000" stroke-width="2.5"/><path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#000" stroke-width="2.5" stroke-linecap="round"/></svg>
+                                FORMACIÓN PROFESIONAL (TOCÁ CADA INSIGNIA)
+                            </h3>
+                            <p class="hl-ab-credentials-text">
+                                «Soy Técnica Nacional en Recreación, Máster en Gamificación y Narrativa Transmedia, coach grupal y tengo un Diplomado Universitario en creación de juegos de mesa. Técnica en Ludotecas y creación de juegos y juguetes.»
+                            </p>
+                            <ul class="hl-ab-badges-list" aria-label="Títulos y certificaciones de Sandra">
+                                <li class="hl-ab-cred-chip" tabindex="0">✨ Técnica Nacional en Recreación</li>
+                                <li class="hl-ab-cred-chip" tabindex="0">🎮 Máster en Gamificación y Narrativa Transmedia</li>
+                                <li class="hl-ab-cred-chip" tabindex="0">🤝 Coach Grupal</li>
+                                <li class="hl-ab-cred-chip" tabindex="0">🎲 Diplomado Universitario en Creación de Juegos de Mesa</li>
+                                <li class="hl-ab-cred-chip" tabindex="0">🧸 Técnica en Ludotecas y Creación de Juegos y Juguetes</li>
+                            </ul>
+                        </div>
+
+                        <!-- Visión del Juego -->
+                        <blockquote class="hl-ab-vision-quote hl-ab-scroll-anim" data-anim="fade-up" style="--hl-delay: 0.25s;">
+                            <p>«Considero al juego como una herramienta fundamental para aplicar en todas las edades y contextos, y me encantan todas las propuestas que estamos desarrollando en Homo Ludens para diversos públicos.»</p>
+                        </blockquote>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- =============================================================
+                 D. PERFIL DE NATÀLIA JIMÉNEZ MORELL
+                 ============================================================= -->
+            <article id="perfil-natalia" class="hl-ab-profile-card hl-ab-theme-natalia hl-ab-scroll-anim" data-anim="slide-right" aria-labelledby="title-natalia">
+                <div class="hl-ab-profile-grid hl-ab-grid-reverse">
+
+                    <!-- Columna Editorial e Historia de Natàlia -->
+                    <div class="hl-ab-profile-info">
+                        <div class="hl-ab-profile-header hl-ab-scroll-anim" data-anim="fade-up">
+                            <span class="hl-ab-profile-role">CO-FUNDADORA • DE BARCELONA A BAHÍA BLANCA (DESDE 2010)</span>
+                            <h2 id="title-natalia" class="hl-ab-profile-name hl-ab-kinetic-title">
+                                NATÀLIA JIMÉNEZ MORELL
+                            </h2>
+                        </div>
+
+                        <!-- Bloques Narrativos Reales -->
+                        <div class="hl-ab-story-blocks">
+                            <div class="hl-ab-story-item hl-ab-scroll-anim" data-anim="fade-up" style="--hl-delay: 0.08s;">
+                                <span class="hl-ab-story-label">🌍 De Barcelona a Bahía Blanca y el juego en familia</span>
+                                <p>«Soy de Barcelona y resido en Bahía Blanca desde el 2010. Juego a juegos de mesa desde que tengo uso de razón, pasé horas jugando con mi familia y <span class="hl-ab-text-highlight">creo que es la mejor excusa para pasar un rato con los que más quieres.</span>»</p>
+                            </div>
+
+                            <!-- Componente Lúdico Interactivo: Juegos Preferidos de Natàlia -->
+                            <div class="hl-ab-favgames-box hl-ab-scroll-anim" data-anim="zoom-up" style="--hl-delay: 0.14s;">
+                                <div class="hl-ab-favgames-head">
+                                    <span class="hl-ab-story-label">🏆 Sus 3 Juegos de Mesa Preferidos</span>
+                                    <small class="hl-ab-favgames-hint">Tocá cada ficha para explorar</small>
+                                </div>
+                                <p class="hl-ab-favgames-quote">
+                                    «Mis juegos preferidos son el <strong>Carcassonne</strong>, el <strong>Istambul</strong> y el <strong>Azul</strong>. <span class="hl-ab-text-highlight hl-ab-hl-green">Me encanta aprender juegos nuevos y explicarlos</span> a todo aquel que quiera jugarlos.»
+                                </p>
+
+                                <div class="hl-ab-favgames-selector" role="tablist" aria-label="Juegos preferidos de Natàlia">
+                                    <button type="button" class="hl-ab-game-tab is-active" role="tab" aria-selected="true" data-game="carcassonne">
+                                        🏰 Carcassonne
+                                    </button>
+                                    <button type="button" class="hl-ab-game-tab" role="tab" aria-selected="false" data-game="istambul">
+                                        💎 Istambul
+                                    </button>
+                                    <button type="button" class="hl-ab-game-tab" role="tab" aria-selected="false" data-game="azul">
+                                        💠 Azul
+                                    </button>
+                                </div>
+                                <div id="hl-ab-game-detail" class="hl-ab-game-detail-panel" aria-live="polite">
+                                    <strong>Carcassonne:</strong> Uno de los tres favoritos de Natàlia que disfruta enseñar y compartir en las mesas de Casa Homo Ludens.
+                                </div>
+                            </div>
+
+                            <div class="hl-ab-story-item hl-ab-story-highlight-violet hl-ab-scroll-anim" data-anim="fade-up" style="--hl-delay: 0.2s;">
+                                <span class="hl-ab-story-label">🕵️‍♀️ Pasión por las Salas de Escape</span>
+                                <p>«Respecto a juegos de Escape, ¿Qué puedo decir? <span class="hl-ab-text-highlight">Desde que los descubrí se transformó en una adicción</span>, allá donde voy busco algún escape para hacer.»</p>
+                            </div>
+                        </div>
+
+                        <!-- Formación Profesional y Visión Educativa -->
+                        <div class="hl-ab-credentials-panel hl-ab-cred-violet hl-ab-scroll-anim" data-anim="zoom-up" style="--hl-delay: 0.24s;">
+                            <h3 class="hl-ab-credentials-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" fill="#EF9322" stroke="#000" stroke-width="2.5"/><path d="M8 9H16M8 13H13" stroke="#000" stroke-width="2.5" stroke-linecap="round"/></svg>
+                                FORMACIÓN Y MIRADA PEDAGÓGICA (TOCÁ CADA INSIGNIA)
+                            </h3>
+                            <p class="hl-ab-credentials-text">
+                                «Soy maestra de educación infantil y tengo un posgrado en educación socioconstructivista y el juego es una herramienta fundamental para todo aprendizaje.»
+                            </p>
+                            <ul class="hl-ab-badges-list" aria-label="Títulos y formación de Natàlia">
+                                <li class="hl-ab-cred-chip" tabindex="0">🎓 Maestra de Educación Infantil</li>
+                                <li class="hl-ab-cred-chip" tabindex="0">🧠 Posgrado en Educación Socioconstructivista</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Columna Retrato y Contacto Rápido de Natàlia -->
+                    <div class="hl-ab-profile-media hl-ab-scroll-anim" data-anim="zoom-up" style="--hl-delay: 0.1s;">
+                        <div class="hl-ab-photo-wrapper">
+                            <div class="hl-ab-photo-frame hl-ab-frame-alt hl-ab-tilt-card" data-has-photo="false">
+                                <!-- Reemplazar src con la ruta de WordPress de Natàlia -->
+                                <img
+                                    src="natalia-jimenez-morell.jpg"
+                                    alt="Retrato de Natàlia Jiménez Morell"
+                                    class="hl-ab-founder-img"
+                                    onerror="this.parentElement.setAttribute('data-img-missing', 'true');"
+                                >
+                                <div class="hl-ab-photo-placeholder hl-ab-placeholder-violet" aria-hidden="true">
+                                    <svg viewBox="0 0 120 120" width="84" height="84" fill="none">
+                                        <circle cx="60" cy="60" r="54" fill="#47336E" stroke="#000" stroke-width="5"/>
+                                        <circle cx="60" cy="46" r="18" fill="#EF9322" stroke="#000" stroke-width="4"/>
+                                        <path d="M28 98 C32 76 88 76 92 98" fill="#EF9322" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                                    </svg>
+                                    <span class="hl-ab-placeholder-title">NATÀLIA JIMÉNEZ MORELL</span>
+                                    <span class="hl-ab-placeholder-note">Espacio preparado para fotografía real (<code>natalia-jimenez-morell.jpg</code>)</span>
+                                </div>
+                            </div>
+
+                            <div class="hl-ab-floating-badge hl-ab-badge-natalia">
+                                <span>🧩 EDUCACIÓN INFANTIL Y SOCIOCONSTRUCTIVISMO</span>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de Contacto y Redes de Natàlia -->
+                        <div class="hl-ab-contact-box">
+                            <h3 class="hl-ab-contact-box-title">CONTACTO Y REDES DE NATÀLIA</h3>
+                            <div class="hl-ab-social-list">
+                                <a href="https://wa.me/5492915266225" target="_blank" rel="noopener noreferrer" class="hl-ab-social-pill hl-ab-pill-wa" aria-label="Enviar WhatsApp a Natàlia al 0291 5266225">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    <div>
+                                        <small>Celular / WhatsApp</small>
+                                        <strong>0291 5266225</strong>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.instagram.com/tortuguita.nati/" target="_blank" rel="noopener noreferrer" class="hl-ab-social-pill hl-ab-pill-ig" aria-label="Instagram de Natàlia: tortuguita.nati">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                    <div>
+                                        <small>Instagram</small>
+                                        <strong>tortuguita.nati</strong>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.facebook.com/search/top?q=Nat%C3%A0lia%20Jim%C3%A9nez%20Morell" target="_blank" rel="noopener noreferrer" class="hl-ab-social-pill hl-ab-pill-fb" aria-label="Facebook de Natàlia: Natàlia Jiménez Morell">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                    <div>
+                                        <small>Facebook</small>
+                                        <strong>Natàlia Jiménez Morell</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- =============================================================
+                 E. CIERRE DE LA SECCIÓN (INVITACIÓN Y NAVEGACIÓN REAL)
+                 ============================================================= -->
+            <section class="hl-ab-closing hl-ab-scroll-anim" data-anim="zoom-up" aria-labelledby="hl-ab-closing-title">
+                <div class="hl-ab-closing-card hl-ab-tilt-card">
+                    <span class="hl-ab-closing-badge">¿JUGAMOS UNA PARTIDA O ABRIMOS UN ESCAPE?</span>
+                    <h2 id="hl-ab-closing-title" class="hl-ab-closing-title hl-ab-kinetic-title">
+                        DESCUBRÍ LAS PROPUESTAS DE CASA HOMO LUDENS
+                    </h2>
+                    <p class="hl-ab-closing-desc">
+                        Vení a compartir una mesa, desafiar tu ingenio en nuestras salas de escape o diseñar una propuesta para tu grupo o institución.
+                    </p>
+
+                    <div class="hl-ab-closing-links">
+                        <a href="https://casahomoludens.com/juegos-mesa/" class="hl-ab-btn hl-ab-btn-primary">
+                            🎲 Juegos de Mesa
+                        </a>
+                        <a href="https://casahomoludens.com/juegos-de-escape-2/" class="hl-ab-btn hl-ab-btn-violet">
+                            🗝️ Escape en Vivo
+                        </a>
+                        <a href="https://casahomoludens.com/escapes-virtuales/" class="hl-ab-btn hl-ab-btn-green">
+                            💻 Escape Virtual
+                        </a>
+                        <a href="https://casahomoludens.com/empresas/" class="hl-ab-btn hl-ab-btn-secondary">
+                            💼 Empresas
+                        </a>
+                    </div>
+
+                    <div class="hl-ab-closing-footer">
+                        <span>📧 E-mail oficial: <a href="mailto:casahomoludens@hotmail.com">casahomoludens@hotmail.com</a></span>
+                        <span>📱 Instagram general: <a href="https://www.instagram.com/casahomoludens/" target="_blank" rel="noopener noreferrer">@casahomoludens</a></span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!-- =====================================================================
+         FIN DEL BLOQUE AISLADO PARA WORDPRESS (#hl-about-root)
+         ===================================================================== -->
+
+</body>
+</html>
